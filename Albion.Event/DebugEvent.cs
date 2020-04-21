@@ -1,5 +1,6 @@
 ﻿using Albion.Network;
 using System.Collections.Generic;
+using System;
 
 namespace Albion.Event
 {
@@ -11,5 +12,12 @@ namespace Albion.Event
         }
 
         public Dictionary<byte, object> Parameters { get; }
+        public void showMe()
+        {
+            foreach (object o in Parameters)
+            {
+                Console.WriteLine("EventData " + o.ToString());
+            }
+        }
     }
 }
